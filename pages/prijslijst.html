@@ -6,6 +6,27 @@
   <title>Prijslijst | BSUR Hair</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
+
+<div id="priceModal" class="modal hidden">
+  <div class="modal-content">
+    <button class="close-btn" id="closePriceModal">&times;</button>
+
+    <h2>Prijsinformatie</h2>
+
+    <p>
+      Komt u er zelf niet uit of bent u nieuw bij ons?
+      Bel dan gerust naar <strong>+31 6 22492470</strong>
+      en onze collega’s helpen u graag verder.
+    </p>
+
+    <p>
+      Alle prijzen zijn indicatief en kunnen variëren op basis van
+      haarlengte, haardikte, behandeltijd en productgebruik.
+    </p>
+  </div>
+</div>
+
 <body>
 
 
@@ -14,10 +35,10 @@
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="ons-team.html">Ons Team / Concept</a></li>
+        <li><a href="#">Ons Concept</a></li>
+        <li><a href="ons-team.html">Team</a></li>
         <li><a href="prijslijst.html">Prijslijst</a></li>
-        <li><a href="#">Foto's</a></li>
-        <li><a href="#">Blog</a></li>
+        <li><a href="fotos.html">Foto's</a></li>
         <li><a href="faq.html">FAQ</a></li>
         <li><a href="#">Contact</a></li>
       </ul>
@@ -26,29 +47,42 @@
 
 <section class="price-section">
 
-  <h2 class="choose-title">Kies een kapper</h2>
+<div class="price-header">
+  <h2 class="price-title">Prijslijst</h2>
 
-  <div class="kapper-buttons">
-    <button class="kapper-btn active" data-kapper="danny">Danny</button>
-    <button class="kapper-btn" data-kapper="esmeralda">Esmeralda</button>
-    <button class="kapper-btn" data-kapper="dorette">Dorette</button>
+  <div class="kapper-select">
+    <div class="kapper-label">Kies een kapper:</div>
+
+    <div class="kapper-buttons">
+      <button class="kapper-btn active" data-kapper="danny">Danny</button>
+      <button class="kapper-btn" data-kapper="esmeralda">Esmeralda</button>
+      <button class="kapper-btn" data-kapper="dorette">Dorette</button>
+    </div>
   </div>
 
   <div class="kapper-role" id="kapperRole">Titel: Topstylist</div>
-  <div class="price-title">Prijslijst</div>
 
-  <p class="price-note">Komt u er zelf niet uit of bent u nieuw bij ons,
-  bel dan gerust naar +31 6 22492470 en onze collega's helpen u verder!</p>
+  <br>
+  <div class="price-disclaimer">
+    <a href="#" id="priceInfoLink">Hulp nodig bij het kiezen?</a>
+  </div>
+</div>
+<br>
 
   <div class="price-grid">
     <div class="price-column">
-      <h3>Dames</h3>
+      <h3>Knippen / Stylen</h3>
       <div id="dames"></div>
     </div>
 
     <div class="price-column">
-      <h3>Heren</h3>
+      <h3>Kleuren</h3>
       <div id="heren"></div>
+    </div>
+
+    <div class="price-column">
+      <h3>Verzorgende Behandelingen</h3>
+      <div id="verzorgende-behandelingen"></div>
     </div>
 
     <div class="price-column">
@@ -56,10 +90,6 @@
       <div id="kinderen"></div>
     </div>
 
-    <div class="price-column">
-      <h3>Verzorgende Behandelingen</h3>
-      <div id="verzorgende-behandelingen"></div>
-    </div>
   </div>
 
   <p class="price-note">

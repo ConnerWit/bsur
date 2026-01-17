@@ -405,13 +405,14 @@ body {
 }
 
 .team h2 {
-  color: #2d4830;
-  border: 2px solid white;
+  color: white;
+  border: 2px solid black;
   width: 300px;
+  height: 50px;
   border-radius: 10px;
   margin-left: auto;
   margin-right: auto;
-  background-color: white;
+  background: linear-gradient(to bottom right, #0c2124, #0e3b38);
   font-size: 2rem;
   margin-bottom: 60px;
   font-family: 'Playfair Display', serif;
@@ -431,15 +432,11 @@ body {
 .team-member {
   flex: 0 0 250px;
   text-align: center;
-  background: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  padding: 20px;
+  background: linear-gradient(to bottom right, #0c2124, #0e3b38);
+  border: 2px solid black;
+  box-shadow: 0 4px 3px rgba(0,0,0,0.1);
+  padding: 15px;
   transition: transform 0.3s;
-}
-
-.team-member:hover {
-  transform: translateY(-6px);
 }
 
 .team-member img {
@@ -453,7 +450,7 @@ body {
 .team-member p {
   font-size: 1rem;
   line-height: 1.5;
-  color: #2d4830;
+  color: white;
   margin-top: 15px;
 }
 
@@ -554,16 +551,49 @@ footer {
   gap: 35px;
 }
 
-.faq-item h3 {
-  font-size: 1.3rem;
-  margin-bottom: 8px;
-  color: #2d4830;
+/* ========================= */
+/* FAQ ACCORDION */
+/* ========================= */
+
+.faq-item {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 20px 0;
 }
 
+/* Vraag */
+.faq-item h3 {
+  font-size: 1.3rem;
+  color: #2d4830;
+  cursor: pointer;
+  user-select: none;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Pijl links, tekst begint direct erna */
+.faq-item h3::before {
+  content: "▸";
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+/* Open = pijl omlaag */
+.faq-item.active h3::before {
+  transform: rotate(90deg);
+}
+
+/* Antwoord */
 .faq-item p {
   font-size: 1rem;
   line-height: 1.6;
   color: #3a543a;
+  margin: 12px 0 0;
+  display: none;
+}
+
+/* Zichtbaar wanneer actief */
+.faq-item.active p {
+  display: block;
 }
 
 
@@ -638,7 +668,7 @@ footer {
 .kapper-btn {
   padding: 14px 36px;
   border-radius: 999px;
-  border: 1px solid #c9a24d;
+  border: 1px solid #58855C;
   background: transparent;
   font-size: 1rem;
   cursor: pointer;
@@ -647,7 +677,7 @@ footer {
 
 .kapper-btn.active,
 .kapper-btn:hover {
-  background: #c9a24d;
+  background: #58855C;
   color: #fff;
 }
 
@@ -672,7 +702,7 @@ footer {
 }
 
 .price-column h3 {
-  border-bottom: 2px solid #c9a24d;
+  border-bottom: 2px solid #58855C;
   padding-bottom: 10px;
   margin-bottom: 25px;
 }
@@ -746,13 +776,71 @@ footer {
 }
 
 
-.footer a {
-  color: white; /* warm goud / salon look */
-  text-decoration: none;
+footer a {
+  color: white;
+  text-decoration-line: underline;
+  font-weight: 600;
+}
+
+footer a:hover {
+  color: #58855C; /* zelfde hover als navbar */
+}
+
+footer a:visited {
+  color: white; /* voorkomt paars/blauw */
+}
+
+/* ========================= */
+/* PRIJSLIJST HEADER FIX */
+/* ========================= */
+
+.price-header,
+.price-header * {
+  text-align: left;
+}
+
+/* Titel */
+.price-header .price-title {
+  text-align: left;
+}
+
+/* Kapper selectie */
+.price-header .kapper-select {
+  margin-bottom: 0.75rem;
+}
+
+.price-header .kapper-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons LINKS, niet gecentreerd */
+.price-header .kapper-buttons {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+/* Kapper titel */
+.price-header .kapper-role {
+  text-align: left;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+/* Disclaimer link */
+.price-header .price-disclaimer {
+  margin-top: 0.75rem;
+}
+
+.price-header .price-disclaimer a {
+  color: #777;
   font-weight: 500;
+  text-decoration: underline;
   transition: color 0.2s ease;
 }
 
-.footer a:visited {
-  color: #b08d57;
+.price-header .price-disclaimer a:hover {
+  color: #58855C; /* zelfde groen als accenten */
 }
