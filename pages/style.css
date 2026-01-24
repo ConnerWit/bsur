@@ -427,6 +427,8 @@ body {
   padding-bottom: 20px;
   max-width: 1300px;
   margin: 0 auto;
+
+  align-items: flex-start;
 }
 
 .team-member {
@@ -463,9 +465,57 @@ body {
   }
 
   .team-grid {
-    flex-wrap: wrap;
-    justify-content: center;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
   }
+}
+
+/* Ingeklapte tekst */
+.member-text {
+  max-height: 90px;              /* ongeveer 3–4 regels */
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+
+/* Fade-effect onderaan */
+.member-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(12,33,36,0), rgba(12,33,36,0.9));
+  pointer-events: none;
+}
+
+/* Uitgeklapt */
+.team-member.expanded .member-text {
+  max-height: 1000px; /* groot genoeg voor volledige tekst */
+}
+
+.team-member.expanded .member-text::after {
+  display: none;
+}
+
+/* Meer lezen knop */
+.read-more-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #58855C;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #58855C;
+  color: #2d4830;
 }
 
 
@@ -843,4 +893,120 @@ footer a:visited {
 
 .price-header .price-disclaimer a:hover {
   color: #58855C; /* zelfde groen als accenten */
+}
+
+
+/* ========================= */
+/* CONTACT PAGINA */
+/* ========================= */
+
+.contact-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  font-family: 'Playfair Display', serif;
+  color: #2d4830;
+}
+
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 60px;
+}
+
+.contact-wrapper {
+  display: flex;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* Linker box: info + map */
+.contact-info-box {
+  flex: 1;
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-info-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.contact-info-box p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Map */
+.contact-map {
+  width: 100%;
+  height: 220px;
+  margin-top: 20px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.contact-map iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* Rechter box: formulier */
+.contact-form-box {
+  flex: 1;
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.contact-form-box h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+/* Form styling */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-form label {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 10px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #58855C;
+}
+
+.contact-form button {
+  margin-top: 15px;
+  align-self: flex-start;
+  padding: 10px 28px;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    flex-direction: column;
+  }
 }

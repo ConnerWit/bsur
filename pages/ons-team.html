@@ -18,7 +18,7 @@
         <li><a href="prijslijst.html">Prijslijst</a></li>
         <li><a href="fotos.html">Foto's</a></li>
         <li><a href="faq.html">FAQ</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -32,7 +32,7 @@
   <section class="concept-ambassador-section">
     <div class="concept-ambassador-wrapper">
       <div class="concept">
-        <h2>Ons Concept – Be As You Are Hair</h2>
+        <h2>Filosofie – BSUR Hair</h2>
         <p>
           Bij <strong>Be As You Are Hair</strong> draait alles om <strong>jou</strong>. 
           Wij geloven dat ieder mens uniek is en dat jouw haar daar een weerspiegeling van mag zijn.  
@@ -41,11 +41,12 @@
         <br>
         <p>
           Met <strong>vakmanschap</strong>, <strong>oog voor detail</strong> en de <strong>nieuwste technieken</strong> zorgen wij voor een luxe beleving waarbij kwaliteit en aandacht centraal staan.  
-          Of je nu kiest voor een subtiele look, een complete transformatie of een verzorgende behandeling – wij luisteren naar jouw wensen en geven professioneel advies dat jou versterkt in wie je bent.
+          Of je nu kiest voor een subtiele look, een complete transformatie of een verzorgende behandeling – wij luisteren naar jouw wensen en geven professioneel advies dat past bij jouw haarstructuur, energie & levensstijl.
+          Voor ons is haar meer dan alleen uiterlijk. Het gaat om zelfvertrouwen, uitstraling en je goed voelen bij jezelf.
         </p>
         <br>
         <p>
-          Want bij ons geldt: <strong>jij mag stralen, precies zoals je bent</strong>. 
+          Ons motto: <strong>Be as you are!</strong>
         </p>
       </div>
       <div class="ambassador">
@@ -86,19 +87,43 @@
     <div class="team-grid">
       <div class="team-member">
         <img src="assets/danny.jpg" alt="Teamlid 1">
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+        <div class="member-text">
+            <p>
+                Ik ben Danny Selens, eigenaar en creative director van BSUR Hair in Rotterdam. Al ruim 20 jaar werk ik met haar en geef ik mijn kennis graag door aan de nieuwe generatie kappers. Mijn focus ligt op natuurlijk ogende kleuren, sterke vormen en kapsels die moeiteloos vallen en passen bij wie jij bent.
+
+                Mijn tip? Volg geen trends, maar kies een look die past bij jouw haar en levensstijl.
+                Mijn motto: Be As You Are!
+            </p>
+        </div>
+
+        <button class="read-more-btn">Meer lezen</button>
       </div>
       <div class="team-member">
         <img src="assets/andy.png" alt="Teamlid 2">
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+        <p>
+            andy
+        </p>
       </div>
       <div class="team-member">
         <img src="assets/esmeralda(1).png" alt="Teamlid 3">
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+        <div class="member-text">
+            <p>
+                Hi, Ik ben Esmeralda. ik ben hairstylist en volg daarnaast de opleiding tot salonmanager. Mijn passie ligt bij transformaties, waarbij ik graag een look creëer die echt bij jou past. Iedereen is welkom in mijn stoel — samen zorgen we voor haar dat jouw persoonlijkheid laat stralen. Mijn haar-tip? Blijf dicht bij jezelf, want het mooiste haar is haar dat bij jou hoort.
+            </p>
+        </div>
+
+        <button class="read-more-btn">Meer lezen</button>
       </div>
       <div class="team-member">
         <img src="assets/dorette.jpg" alt="Teamlid 4">
-        <p>Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat.</p>
+        <div class="member-text">
+            <p>
+                Ik ben Dorette, geboren in 1973 te Rotterdam. Naast hairstylist ben ik ook kunstenaar; ik schilder oa portretten en ben pottenbakker.  Een nieuwe coupe zie ik ook als een kunstwerkje: het moet in verhouding en balans zijn en ook volledig aansluiten bij de wens van de klant.
+                Als ik echt moet kiezen... vind ik knippen nòg leuker dan kleuren en dan vooral de kortere kapsels.
+            </p>
+        </div>
+
+        <button class="read-more-btn">Meer lezen</button>
       </div>
     </div>
   </section>
@@ -121,5 +146,20 @@
     <p class="copyright">© BSUR Hair 2025. Alle rechten voorbehouden.</p>
   </footer>
 
+
+<script>
+document.querySelectorAll(".read-more-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const card = btn.closest(".team-member");
+    card.classList.toggle("expanded");
+
+    if (card.classList.contains("expanded")) {
+      btn.textContent = "Minder lezen";
+    } else {
+      btn.textContent = "Meer lezen";
+    }
+  });
+});
+</script>
 </body>
 </html>

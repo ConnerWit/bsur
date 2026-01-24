@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | BSUR Hair</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <img src="assets/logo.png" alt="BSUR Hair logo" class="logo">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#">Ons Concept</a></li>
+      <li><a href="ons-team.html">Team</a></li>
+      <li><a href="prijslijst.html">Prijslijst</a></li>
+      <li><a href="fotos.html">Foto's</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Contact Section -->
+<section class="contact-section">
+
+  <h2>Contact</h2>
+
+  <div class="contact-wrapper">
+
+    <!-- Linker kolom: Contact info + locatie -->
+    <div class="contact-info-box">
+      <h3>Neem contact met ons op</h3>
+
+      <p><strong>Telefoon:</strong><br>
+      +31 6 22492470</p>
+
+      <p><strong>E-mail:</strong><br>
+      teambsurhair@hotmail.com</p>
+
+      <p><strong>Adres:</strong><br>
+      Van Speykstraat 141<br>
+      3014 VJ Rotterdam</p>
+
+      <div class="contact-map">
+        <iframe 
+          src="https://www.google.com/maps?q=Van%20Speykstraat%20141%2C%203014%20VJ%20Rotterdam&amp;output=embed&amp;hl=en-GB&amp;z=14"
+          frameborder="0"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </div>
+
+    <!-- Rechter kolom: Formulier -->
+    <div class="contact-form-box">
+      <h3>Stuur ons een bericht</h3>
+
+      <form action="mailto:teambsurhair@hotmail.com" method="post" enctype="text/plain" class="contact-form">
+
+        <label for="name">Naam</label>
+        <input type="text" id="name" name="Naam" required>
+
+        <label for="email">E-mail</label>
+        <input type="email" id="email" name="E-mail" required>
+
+        <label for="subject">Onderwerp</label>
+        <input type="text" id="subject" name="Onderwerp">
+
+        <label for="message">Bericht</label>
+        <textarea id="message" name="Bericht" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Verstuur bericht</button>
+
+      </form>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="footer-info">
+    <h3>Contact</h3>
+    <p>Telefoon: +31 6 22492470</p>
+    <p>Van Speykstraat 141<br>3014 VJ Rotterdam</p>
+  </div>
+  <div class="footer-socials">
+    <p>Volg ons:</p>
+    <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+  </div>
+  <p class="copyright">© BSUR Hair 2025. Alle rechten voorbehouden.</p>
+  <a href="#" id="privacyLink">Privacyverklaring</a>
+</footer>
+
+</body>
+</html>
