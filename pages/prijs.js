@@ -4,108 +4,116 @@ document.addEventListener("DOMContentLoaded", () => {
      BASIS SERVICES
   ========================= */
 
-  const baseServices = {
-    knippen: [
-      { title: "Kort haar", desc: "30–45 minuten knippen & föhnen", price: 58 },
-      { title: "Halflang haar", desc: "45 minuten knippen & föhnen", price: 74 },
-      { title: "Lang haar", desc: "60 minuten knippen & föhnen", price: 89 },
-      { title: "Föhnen (onder schouderlengte)", desc: "Stevig geföhnd", price: 55 },
-      { title: "Föhnen (schouderlengte en korter)", desc: "In model geföhnd", price: 40 }
-    ],
+    const baseServices = {
+      knippen: [
+        { title: "Kort haar", desc: "30–45 min knippen & föhnen", price: 58 },
+        { title: "Halflang haar", desc: "45 min knippen & föhnen", price: 74 },
+        { title: "Lang haar", desc: "60 min knippen & föhnen", price: 89 }
+      ],
 
-    kleuren: [
-      { title: "Uitgroei + knippen", desc: "Tot 1,5 cm uitgroei", price: 140 },
-      { title: "Volledige kleuring + knippen", desc: "Meer dan alleen uitgroei", price: 170 },
-      { title: "Uitgroei kleuren", desc: "Zonder knippen", price: 65 },
-      { title: "Volledige kleuring", desc: "Inclusief snel drogen", price: 110 }
-    ],
+      styling: [
+        { title: "Föhnen (onder schouderlengte)", desc: "In model geföhnd", price: 55 },
+        { title: "Föhnen (schouder en korter)", desc: "In model geföhnd", price: 40 }
+      ],
 
-    verzorging: [
-      { title: "Intensieve verzorging", desc: "O&M herstellende behandeling", price: 20 },
-      { title: "Olaplex behandeling", desc: "Herstelt en versterkt het haar", price: 40 },
-      { title: "Urban Alchemy cleanse", desc: "Diep reinigende behandeling", price: 30 }
-    ],
+      kleuren: [
+        { title: "Uitgroei + knippen", desc: "Tot 1,5 cm uitgroei + knippen", price: 140 },
+        { title: "Volledige kleuring + knippen", desc: "Meer dan alleen uitgroei", price: 170 },
+        { title: "Uitgroei", desc: "Tot 1,5 cm uitgroei", price: 65 },
+        { title: "Volledige kleuring", desc: "Meer dan alleen uitgroei + snel drogen", price: 110 },
+        { title: "Face frame", desc: "Highlights rond het gezicht (¼)", price: 70 }
+      ],
 
-    kinderen: [
-      { title: "Kinderen t/m 12 jaar", desc: "Alleen buiten piekuren", price: 35 }
-    ]
-  };
+      verzorging: [
+        { title: "Intensieve verzorging", desc: "O&M herstellende behandeling", price: 20 },
+        { title: "Olaplex behandeling", desc: "Herstelt en versterkt het haar", price: 40 },
+        { title: "Urban Alchemy cleanse", desc: "Diep reinigende behandeling", price: 30 }
+      ],
 
+      kinderen: [
+        { title: "Kinderen t/m 12 jaar", desc: "Alleen buiten piekuren", price: 35 }
+      ]
+    };
 
-  const halfTopServices = {
-    ...baseServices,
-    kleuren: [
-      ...baseServices.kleuren,
-      {
-        title: "Face frame",
-        desc: "Subtiele highlights rond het gezicht (¼ van het haar)",
-        price: 70
-      }
-    ]
-  };
+    const topStylistExtras = [
+      { title: "Halve coupe highlights", desc: "Highlights op ½ van het haar", price: 130 },
+      { title: "Volledige coupe highlights", desc: "Highlights over het gehele haar", price: 180 }
+    ];
 
-
-  /* =========================
-     TOPSTYLIST EXTRA'S
-  ========================= */
-
-  const topServices = {
-    ...baseServices,
-    kleuren: [
-      ...baseServices.kleuren,
-      {
-        title: "Face frame",
-        desc: "Subtiele highlights rond het gezicht (¼ van het haar)",
-        price: 70
-      },
-      {
-        title: "Halve coupe highlights",
-        desc: "Highlights op ½ van het haar, inclusief snel drogen",
-        price: 130
-      },
-      {
-        title: "Volledige coupe highlights",
-        desc: "Highlights over het gehele haar",
-        price: 180
-      }
-    ]
-  };
-
-    
-
-const kleurenZonderFaceFrame = baseServices.kleuren;
 
   /* =========================
      PRIJZEN PER KAPPER
   ========================= */
 
-const prices = {
-  esmeralda: {
-    ...baseServices,
-    kleuren: halfTopServices.kleuren // WEL face frame
-  },
+    const prices = {
+      danny: {
+        knippen: baseServices.knippen.map(s => ({
+          ...s,
+          price: Math.round(s.price * 1.1) // topstylist opslag
+        })),
 
-  dorette: {
-    ...baseServices,
-    kleuren: kleurenZonderFaceFrame // GEEN face frame
-  },
+        styling: baseServices.styling.map(s => ({
+          ...s,
+          price: Math.round(s.price * 1.1)
+        })),
 
-  danny: {
-    knippen: topServices.knippen.map(s => ({
-      ...s,
-      price: Math.round(s.price * 1.1)
-    })),
-    kleuren: topServices.kleuren.map(s => ({
-      ...s,
-      price: Math.round(s.price * 1.1)
-    })),
-    verzorging: topServices.verzorging.map(s => ({
-      ...s,
-      price: Math.round(s.price * 1.1)
-    })),
-    kinderen: [] // Danny doet geen kinderen
-  }
-};
+        kleuren: [
+          ...baseServices.kleuren.map(s => ({
+            ...s,
+            price: Math.round(s.price * 1.1)
+          })),
+          ...topStylistExtras.map(s => ({
+            ...s,
+            price: Math.round(s.price * 1.1)
+          }))
+        ],
+
+        verzorging: [],   // Danny doet GEEN behandelingen
+        kinderen: []     // Danny doet GEEN kinderen
+      },
+
+      esmeralda: {
+        knippen: baseServices.knippen,
+        styling: baseServices.styling,
+
+        kleuren: baseServices.kleuren.filter(s =>
+          s.title !== "Halve coupe highlights" &&
+          s.title !== "Volledige coupe highlights"
+        ),
+
+        verzorging: baseServices.verzorging,
+        kinderen: baseServices.kinderen
+      },
+
+      dorette: {
+        knippen: baseServices.knippen,
+        styling: baseServices.styling,
+
+        kleuren: baseServices.kleuren.filter(s =>
+          s.title !== "Face frame" &&
+          s.title !== "Halve coupe highlights" &&
+          s.title !== "Volledige coupe highlights"
+        ),
+
+        verzorging: baseServices.verzorging,
+        kinderen: baseServices.kinderen
+      },
+
+      andy: {
+        knippen: [],
+        styling: baseServices.styling,
+
+        kleuren: baseServices.kleuren.filter(s =>
+          s.title !== "Uitgroei + knippen" &&
+          s.title !== "Volledige kleuring + knippen" &&
+          s.title !== "Face frame" &&
+          s.title !== "Halve coupe highlights" &&
+          s.title !== "Volledige coupe highlights"
+        ),
+        verzorging: baseServices.verzorging,
+        kinderen: baseServices.kinderen
+      }
+    };
 
   /* =========================
      ROLLEN
@@ -114,7 +122,8 @@ const prices = {
   const roles = {
     danny: "Titel: Topstylist",
     esmeralda: "Titel: Hairstylist",
-    dorette: "Titel: Hairstylist"
+    dorette: "Titel: Hairstylist",
+    andy: "Titel: Junior Stylist"
   };
 
   /* =========================
@@ -141,22 +150,26 @@ const prices = {
      KAPPER LADEN
   ========================= */
 
-  function loadKapper(name) {
-    document.getElementById("kapperRole").innerText = roles[name];
+  function toggleColumn(id, list) {
+      const column = document.getElementById(id).parentElement;
 
-    render("dames", prices[name].knippen);
-    render("heren", prices[name].kleuren);
-    render("verzorgende-behandelingen", prices[name].verzorging);
-
-    const kinderenColumn = document.getElementById("kinderen").parentElement;
-
-    if (prices[name].kinderen.length === 0) {
-      kinderenColumn.style.display = "none";
-    } else {
-      kinderenColumn.style.display = "block";
-      render("kinderen", prices[name].kinderen);
-    }
+      if (!list || list.length === 0) {
+          column.style.display = "none";
+      } else {
+          column.style.display = "block";
+          render(id, list);
+      }
   }
+
+    function loadKapper(name) {
+      document.getElementById("kapperRole").innerText = roles[name];
+
+      toggleColumn("dames", prices[name].knippen);
+      toggleColumn("styling", prices[name].styling);
+      toggleColumn("heren", prices[name].kleuren);
+      toggleColumn("verzorgende-behandelingen", prices[name].verzorging);
+      toggleColumn("kinderen", prices[name].kinderen);
+    }
 
   /* =========================
      BUTTON EVENTS

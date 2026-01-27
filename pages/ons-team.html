@@ -100,9 +100,12 @@
       </div>
       <div class="team-member">
         <img src="assets/andy.png" alt="Teamlid 2">
-        <p>
-            andy
-        </p>
+        <div class="member-text">
+            <p>
+                    Ik ben Andy. Ik ben junior hairstylist en sinds kort volg ik een opleiding voor heren( kapsels en baarden). Mijn focus ligt op heren kapsels,hoofd massages en op extravagante kleuren. Mijn beste tip? Kies een look waarin je jezelf voelt.
+            </p>
+        </div>
+        <button class="read-more-btn">Meer lezen</button>
       </div>
       <div class="team-member">
         <img src="assets/esmeralda(1).png" alt="Teamlid 3">
@@ -130,22 +133,19 @@
 
   <!-- Footer -->
   <footer>
-    <div class="footer-columns">
-      <div class="footer-info">
-        <h3>Contact</h3>
-        <p>Telefoon: +31 6 22492470</p>
-        <p>Van Speykstraat 141<br>3014 VJ Rotterdam</p>
-      </div>
-      <div class="footer-socials">
-        <h3>Volg Ons!</h3>
-        <a href="#">Facebook</a>
-        <a href="#">Instagram</a>
-        <a href="#">LinkedIn</a>
-      </div>
+    <div class="footer-info">
+      <h3>Contact</h3>
+      <p>Telefoon: +31 6 22492470</p>
+      <p>Van Speykstraat 141<br>3011 VJ Rotterdam</p>
+    </div>
+    <div class="footer-socials">
+      <p>Volg ons:</p>
+      <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
     </div>
     <p class="copyright">© BSUR Hair 2025. Alle rechten voorbehouden.</p>
+    <a href="#" id="privacyLink">Privacyverklaring</a> -
+    <a href="algemene-voorwaarden.html">Algemene voorwaarden</a>
   </footer>
-
 
 <script>
 document.querySelectorAll(".read-more-btn").forEach(btn => {
@@ -161,5 +161,35 @@ document.querySelectorAll(".read-more-btn").forEach(btn => {
   });
 });
 </script>
+<script src="privacy.js"></script>
+
+    <div id="privacyModal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-btn" id="closePrivacy">&times;</button>
+
+        <h2>Privacyverklaring</h2>
+
+        <p>
+          BSUR Hair hecht veel waarde aan uw privacy. Deze website is uitsluitend
+          informatief en verzamelt geen persoonsgegevens.
+        </p>
+
+        <p>
+          Afspraken worden gemaakt via een externe boekingswebsite. Voor de verwerking
+          van persoonsgegevens via deze dienst is de betreffende externe partij
+          verantwoordelijk.
+        </p>
+
+        <p>
+          Deze website maakt geen gebruik van tracking cookies en verwerkt geen
+          persoonsgegevens via formulieren of accounts.
+        </p>
+
+        <p>
+          Heeft u vragen? Neem gerust contact met ons op.
+        </p>
+      </div>
+    </div>
+
 </body>
 </html>
