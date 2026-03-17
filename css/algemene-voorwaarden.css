@@ -1,0 +1,52 @@
+.terms-section {
+  max-width: 800px;
+  margin: 100px auto;
+  padding: 0 20px;
+  font-family: 'Playfair Display', serif;
+  color: #2d4830;
+}
+
+.terms-section h1 {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 50px;
+}
+
+.terms-section h2 {
+  font-size: 1.4rem;
+  margin-top: 40px;
+  margin-bottom: 12px;
+  color: #2d4830;
+}
+
+.terms-section p {
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+.terms-intro {
+  text-align: center;
+  font-size: 1.05rem;
+  margin-bottom: 60px;
+  opacity: 0.9;
+}
+
+.terms-note {
+  margin-top: 60px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .terms-section {
+    margin: 60px auto;
+    padding: 0 16px;
+  }
+
+  .terms-section h1 {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+}

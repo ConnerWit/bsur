@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | BSUR Hair</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/contact.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <section class="contact-section">
+    <h2 data-i18n="contact.title">Contact</h2>
+    <div class="contact-wrapper">
+
+      <div class="contact-info-box">
+        <h3 data-i18n="contact.info_title">Neem contact met ons op</h3>
+        <p><strong data-i18n="contact.telefoon">Telefoon:</strong><br>+31 6 22492470</p>
+        <p><strong data-i18n="contact.email">E-mail:</strong><br>teambsurhair@hotmail.com</p>
+        <p><strong data-i18n="contact.adres">Adres:</strong><br>Van Speykstraat 141<br>3014 VJ Rotterdam</p>
+        <div class="contact-map">
+          <iframe
+            src="https://www.google.com/maps?q=Van%20Speykstraat%20141%2C%203014%20VJ%20Rotterdam&output=embed&hl=nl&z=14"
+            frameborder="0" allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+
+      <div class="contact-form-box">
+        <h3 data-i18n="contact.form_title">Stuur ons een bericht</h3>
+        <form action="mailto:teambsurhair@hotmail.com" method="post" enctype="text/plain" class="contact-form">
+          <label for="name" data-i18n="contact.naam">Naam</label>
+          <input type="text" id="name" name="Naam" data-i18n-placeholder="contact.naam" required>
+
+          <label for="email" data-i18n="contact.email_label">E-mail</label>
+          <input type="email" id="email" name="E-mail" data-i18n-placeholder="contact.email_label" required>
+
+          <label for="subject" data-i18n="contact.onderwerp">Onderwerp</label>
+          <input type="text" id="subject" name="Onderwerp" data-i18n-placeholder="contact.onderwerp">
+
+          <label for="message" data-i18n="contact.bericht">Bericht</label>
+          <textarea id="message" name="Bericht" rows="6" required></textarea>
+
+          <button type="submit" class="btn" data-i18n="contact.verstuur">Verstuur bericht</button>
+        </form>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/i18n.js"></script>
+
+</body>
+</html>

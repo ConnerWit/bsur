@@ -1,0 +1,286 @@
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.hero img {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.hero-text {
+  position: absolute;
+  top: 15%;
+  left: 8%;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 20px 26px;
+  border-radius: 10px;
+  color: #2d4830;
+  max-width: 200px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.hero-text h1 {
+  font-size: 1.9rem;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #2d4830;
+}
+
+.hero-text .highlight {
+  color: #58855C;
+  font-weight: 700;
+}
+
+.hero-buttons {
+  margin-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.hero-buttons .btn,
+.hero-buttons .btn-outline {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 9px 0;
+  transition: 0.3s;
+  box-sizing: border-box;
+}
+
+.hero-buttons .btn {
+  border: 2px solid #58855C;
+  background: #58855C;
+  color: #2d4830;
+}
+
+.hero-buttons .btn:hover {
+  background: #9EB8A0;
+}
+
+.hero-buttons .btn-outline {
+  border: 2px solid #58855C;
+  color: #2d4830;
+  background: transparent;
+}
+
+.hero-buttons .btn-outline:hover {
+  background: #9EB8A0;
+  color: #2d4830;
+}
+
+.hero-rating {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 20px 26px;
+  border-radius: 10px;
+  text-align: center;
+  color: #2d4830;
+  font-weight: 600;
+  max-width: 200px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-rating h2 {
+  margin: 10px 0 5px;
+  font-size: 1.5rem;
+  color: #2d4830;
+}
+
+.hero-rating p {
+  margin: 4px 0;
+  font-size: 0.9rem;
+}
+
+.hero-rating .stars {
+  color: #f4b400;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  margin-top: 5px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 60px 20px;
+  background: #f9f9f9;
+}
+
+.info h2 {
+  color: #2d4830;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 320px;
+  height: 180px;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-top: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.openingstijden ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.openingstijden li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+.openingstijden li span.day {
+  font-weight: 600;
+  display: inline-block;
+  width: 90px;
+}
+
+.openingstijden li span.time {
+  color: #2d4830;
+}
+
+.reviews {
+  text-align: center;
+  padding: 60px 20px;
+  background: #fff;
+}
+
+.review-carousel-wrapper {
+  position: relative;
+  width: 50%;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.review-carousel {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.review-item {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  font-style: italic;
+  color: #2d4830;
+  text-align: center;
+  letter-spacing: 0.5px;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.review-item.active {
+  opacity: 1;
+}
+
+.prev, .next {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #000;
+  font-weight: 300;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.2s;
+  margin: 0 20px;
+}
+
+.prev:hover, .next:hover {
+  color: #555;
+  transform: scale(1.2);
+}
+
+/* ─── Responsive ─────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .hero img {
+    height: 60vh;
+  }
+
+  .hero-text {
+    top: 8%;
+    left: 5%;
+    max-width: 160px;
+    padding: 14px 16px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-rating {
+    top: auto;
+    bottom: 5%;
+    right: 5%;
+    max-width: 140px;
+    padding: 12px 14px;
+  }
+
+  .hero-rating h2 {
+    font-size: 1.2rem;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 40px;
+  }
+
+  .map-container {
+    max-width: 100%;
+  }
+
+  .review-carousel-wrapper {
+    width: 90%;
+    height: 180px;
+  }
+
+  .reviews {
+    padding: 40px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+    max-width: 140px;
+    font-size: 0.85rem;
+  }
+
+  .hero-rating {
+    display: none;
+  }
+}

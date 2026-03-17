@@ -1,0 +1,45 @@
+.photos-section {
+  padding: 100px 40px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #2d4830;
+}
+
+.photos-section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.instagram-link {
+  font-size: 1rem;
+  margin-bottom: 50px;
+}
+
+.instagram-link a {
+  color: #58855C;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.instagram-link a:hover {
+  text-decoration: underline;
+}
+
+.behold-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.behold-wrapper iframe {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .photos-section {
+    padding: 60px 16px;
+  }
+
+  .photos-section h1 {
+    font-size: 1.8rem;
+  }
+}

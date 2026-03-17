@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prijslijst | BSUR Hair</title>
+  <link rel="icon" type="image/png" href="../assets/logo.png">
+  <link rel="stylesheet" href="../css/base.css">
+  <link rel="stylesheet" href="../css/prijslijst.css">
+</head>
+<body>
+
+  <div id="navbar-placeholder"></div>
+
+  <div id="priceModal" class="modal hidden">
+    <div class="modal-content">
+      <button class="close-btn" id="closePriceModal">&times;</button>
+      <h2 data-i18n="prijslijst.modal_title">Prijsinformatie</h2>
+      <p data-i18n="prijslijst.modal_p1">Komt u er zelf niet uit?</p>
+      <p data-i18n="prijslijst.modal_p2">Alle prijzen zijn indicatief.</p>
+    </div>
+  </div>
+
+  <section class="price-section">
+    <div class="price-header">
+      <h2 class="price-title" data-i18n="prijslijst.title">Prijslijst</h2>
+      <div class="kapper-select">
+        <div class="kapper-label" data-i18n="prijslijst.kies_kapper">Kies een kapper:</div>
+        <div class="kapper-buttons">
+          <button class="kapper-btn active" data-kapper="danny">Danny</button>
+          <button class="kapper-btn" data-kapper="esmeralda">Esmeralda</button>
+          <button class="kapper-btn" data-kapper="dorette">Dorette</button>
+          <button class="kapper-btn" data-kapper="andy">Andy</button>
+        </div>
+      </div>
+      <div class="kapper-role" id="kapperRole">Titel: Topstylist</div>
+      <br>
+      <div class="price-disclaimer">
+        <a href="#" id="priceInfoLink" data-i18n="prijslijst.hulp">Hulp nodig bij het kiezen?</a>
+      </div>
+    </div>
+
+    <br>
+
+    <div class="price-grid">
+      <div class="price-column">
+        <h3 data-i18n="prijslijst.knippen">Knippen</h3>
+        <div id="dames"></div>
+      </div>
+      <div class="price-column">
+        <h3 data-i18n="prijslijst.kleuren">Kleuren</h3>
+        <div id="heren"></div>
+      </div>
+      <div class="price-column">
+        <h3 data-i18n="prijslijst.kinderen">Kinderen</h3>
+        <div id="kinderen"></div>
+      </div>
+      <div class="price-column">
+        <h3 data-i18n="prijslijst.behandelingen">Behandelingen</h3>
+        <div id="verzorgende-behandelingen"></div>
+      </div>
+      <div class="price-column">
+        <h3 data-i18n="prijslijst.styling">Styling</h3>
+        <div id="styling"></div>
+      </div>
+    </div>
+
+    <p class="price-note" data-i18n="prijslijst.note">* Alle prijzen zijn indicatief.</p>
+  </section>
+
+  <div id="footer-placeholder"></div>
+
+  <script src="../js/includes.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/prijs.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,241 @@
+.team-hero {
+  width: 50%;
+  height: 50vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.team-hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.concept,
+.ambassador,
+.team {
+  font-family: 'Playfair Display', serif;
+  color: #2d4830;
+}
+
+.concept-ambassador-section {
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 80px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.concept-ambassador-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #f9f9f9;
+  z-index: -1;
+}
+
+.concept-ambassador-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+  flex-wrap: wrap;
+}
+
+.concept, .ambassador {
+  flex: 1 1 450px;
+  max-width: 520px;
+  text-align: left;
+}
+
+.concept h2, .ambassador h3 {
+  font-size: 1.7rem;
+  color: #2d4830;
+  margin-bottom: 20px;
+  font-family: 'Playfair Display', serif;
+}
+
+.concept p, .ambassador p {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #2d4830;
+}
+
+.ambassador a {
+  color: #f4b400;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.ambassador a:hover {
+  text-decoration: underline;
+}
+
+.team {
+  background: #fff;
+  background-image: url("../assets/behang.png");
+  text-align: center;
+  padding: 100px 40px;
+}
+
+.team h2 {
+  color: white;
+  border: 2px solid black;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  margin: 0 auto 60px;
+  background: linear-gradient(to bottom right, #0c2124, #0e3b38);
+  font-size: 2rem;
+  font-family: 'Playfair Display', serif;
+}
+
+.team-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 40px;
+  overflow-x: auto;
+  padding-bottom: 20px;
+  max-width: 1300px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+.team-member {
+  flex: 0 0 250px;
+  text-align: center;
+  background: linear-gradient(to bottom right, #0c2124, #0e3b38);
+  border: 2px solid black;
+  border-radius: 15px;
+  box-shadow: 0 4px 3px rgba(0,0,0,0.1);
+  padding: 15px;
+  transition: transform 0.3s;
+}
+
+.team-member img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  background: #ddd;
+}
+
+.team-member p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: white;
+  margin-top: 15px;
+}
+
+.member-text {
+  max-height: 90px;
+  overflow: hidden;
+  position: relative;
+  transition: max-height 0.4s ease;
+}
+
+.member-text::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 40px;
+  background: linear-gradient(to bottom, rgba(12,33,36,0), rgba(12,33,36,0.9));
+  pointer-events: none;
+}
+
+.team-member.expanded .member-text {
+  max-height: 1000px;
+}
+
+.team-member.expanded .member-text::after {
+  display: none;
+}
+
+.read-more-btn {
+  margin-top: 12px;
+  background: transparent;
+  border: 1px solid #58855C;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-family: 'Playfair Display', serif;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.read-more-btn:hover {
+  background: #58855C;
+  color: #2d4830;
+}
+
+@media (max-width: 1100px) {
+  .concept-ambassador-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+
+  .team-grid {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 900px) {
+  .concept-ambassador-wrapper {
+    gap: 40px;
+  }
+
+  .concept, .ambassador {
+    max-width: 90%;
+  }
+
+  .team-hero {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .team-hero {
+    width: 100%;
+    height: 35vh;
+  }
+
+  .concept-ambassador-wrapper {
+    flex-direction: column;
+    gap: 40px;
+    padding: 0 20px;
+  }
+
+  .concept, .ambassador {
+    max-width: 100%;
+  }
+
+  .team {
+    padding: 60px 20px;
+  }
+
+  .team-grid {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+  }
+
+  .team-member {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  .team-member {
+    flex: 0 0 100%;
+  }
+}

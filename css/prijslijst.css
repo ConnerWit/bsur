@@ -1,0 +1,154 @@
+.price-section {
+  max-width: 1200px;
+  margin: 80px auto;
+  padding: 0 20px;
+  color: #2d4830;
+  font-family: 'Playfair Display', serif;
+}
+
+.price-header,
+.price-header * {
+  text-align: left;
+}
+
+.price-header .price-title {
+  text-align: left;
+}
+
+.price-header .kapper-select {
+  margin-bottom: 0.75rem;
+}
+
+.price-header .kapper-label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.price-header .kapper-buttons {
+  justify-content: flex-start;
+  margin-bottom: 0;
+}
+
+.price-header .kapper-role {
+  text-align: left;
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: #666;
+}
+
+.price-header .price-disclaimer {
+  margin-top: 0.75rem;
+}
+
+.price-header .price-disclaimer a {
+  color: #777;
+  font-weight: 500;
+  text-decoration: underline;
+  transition: color 0.2s ease;
+}
+
+.price-header .price-disclaimer a:hover {
+  color: #58855C;
+}
+
+.price-title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 10px 0 40px;
+}
+
+.kapper-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.kapper-btn {
+  padding: 14px 36px;
+  border-radius: 999px;
+  border: 1px solid #58855C;
+  background: transparent;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.kapper-btn.active,
+.kapper-btn:hover {
+  background: #58855C;
+  color: #fff;
+}
+
+.kapper-role {
+  text-align: center;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 50px;
+}
+
+.price-column h3 {
+  border-bottom: 2px solid #58855C;
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+.service {
+  margin-bottom: 20px;
+}
+
+.service-title {
+  font-weight: 600;
+}
+
+.service-desc {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.service-price {
+  margin-top: 5px;
+  font-weight: 600;
+}
+
+.price-note {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .price-section {
+    margin: 40px auto;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .kapper-buttons {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .kapper-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+}
