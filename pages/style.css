@@ -679,13 +679,12 @@ footer {
 }
 
 /* Widget container */
-.tagembed-wrapper {
-  max-width: 1200px; /* controls grid width */
+.behold-wrapper {
+  max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Optional: soften widget background */
-.tagembed-wrapper iframe {
+.behold-wrapper iframe {
   border-radius: 10px;
 }
 
