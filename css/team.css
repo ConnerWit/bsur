@@ -232,10 +232,20 @@
   .team-member {
     flex: 0 0 calc(50% - 20px);
   }
+
+  .team-member img {
+    height: 200px;
+    object-position: top;
+  }
 }
 
 @media (max-width: 480px) {
   .team-member {
     flex: 0 0 100%;
+  }
+
+  .team-member img {
+    height: 280px;
+    object-position: top;
   }
 }

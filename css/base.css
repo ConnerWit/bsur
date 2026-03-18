@@ -1,10 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap');
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: 'Playfair Display', serif;
   color: #333;
   background: #fff;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-top: 120px;
+}
+
+main, section, .hero, .info, .reviews, .faq-section, .contact-section,
+.photos-section, .price-section, .terms-section, .team-hero,
+.concept-ambassador-section, .team {
+  flex: 1;
+}
+
+footer {
+  margin-top: auto;
 }
 
 /* ─── Navbar ─────────────────────────────────────────── */
@@ -15,9 +33,19 @@ body {
   align-items: center;
   background: linear-gradient(to bottom right, #0c2124, #0e3b38);
   padding: 10px 20px;
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .navbar .logo {
@@ -91,6 +119,11 @@ body {
   background: linear-gradient(to bottom, #0e3b38, #0c2124);
   padding: 20px;
   gap: 16px;
+  position: fixed;
+  top: 120px;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .mobile-nav.open {
@@ -243,6 +276,14 @@ footer a:visited { color: white; }
 /* ─── Responsive ─────────────────────────────────────── */
 
 @media (max-width: 768px) {
+  body {
+    padding-top: 90px;
+  }
+
+  .mobile-nav {
+    top: 90px;
+  }
+
   .navbar ul,
   .navbar-right .lang-toggle {
     display: none;
@@ -256,7 +297,6 @@ footer a:visited { color: white; }
     gap: 12px;
   }
 
-  /* Show lang toggle next to hamburger on mobile */
   .navbar-right .lang-toggle {
     display: block;
     font-size: 0.8rem;

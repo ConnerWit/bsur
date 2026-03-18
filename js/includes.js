@@ -40,7 +40,7 @@ const footerHTML = `
   </div>
   <div class="footer-socials">
     <p data-i18n="footer.volg">Volg ons:</p>
-    <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">LinkedIn</a>
+    <a href="https://www.instagram.com/bsurhair">Instagram</a> | <a href="https://www.facebook.com/bsurhair">Facebook</a>
   </div>
   <p class="copyright" data-i18n="footer.copyright">© BSUR Hair 2025. Alle rechten voorbehouden.</p>
   <a href="#" id="privacyLink" data-i18n="footer.privacy">Privacyverklaring</a> -

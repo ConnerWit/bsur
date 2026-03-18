@@ -41,6 +41,7 @@ async function setLang(lang) {
   localStorage.setItem("lang", lang);
   await loadTranslations(lang);
   applyTranslations();
+  document.dispatchEvent(new Event("langChanged"));
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
