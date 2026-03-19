@@ -8,8 +8,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title_nl: "Lang haar",     title_en: "Long hair",    desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 98 }
       ],
       styling: [
-        { title_nl: "Föhnen (onder schouderlengte)", title_en: "Blowdry (below shoulders)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
-        { title_nl: "Föhnen (schouder en korter)",   title_en: "Blowdry (shoulder & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
+        { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
+        { title_nl: "Föhnen (op de schouderlengte en korter)",   title_en: "Blowdry (shoulder length & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
       ],
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",          price: 140 },
@@ -31,8 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 }
       ],
       styling: [
-        { title_nl: "Föhnen (onder schouderlengte)", title_en: "Blowdry (below shoulders)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
-        { title_nl: "Föhnen (schouder en korter)",   title_en: "Blowdry (shoulder & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
+        { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
+        { title_nl: "Föhnen (op de schouderlengte en korter)",   title_en: "Blowdry (shoulder length & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
       ],
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",              price: 140 },
@@ -57,8 +57,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 }
       ],
       styling: [
-        { title_nl: "Föhnen (onder schouderlengte)", title_en: "Blowdry (below shoulders)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
-        { title_nl: "Föhnen (schouder en korter)",   title_en: "Blowdry (shoulder & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
+        { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
+        { title_nl: "Föhnen (op de schouderlengte en korter)",   title_en: "Blowdry (shoulder length & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
       ],
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",              price: 140 },
@@ -80,8 +80,8 @@ document.addEventListener("DOMContentLoaded", () => {
         { title_nl: "Kort haar", title_en: "Short hair", desc_nl: "30–45 min knippen & föhnen", desc_en: "30–45 min cut & blowdry", price: 58 }
       ],
       styling: [
-        { title_nl: "Föhnen (onder schouderlengte)", title_en: "Blowdry (below shoulders)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
-        { title_nl: "Föhnen (schouder en korter)",   title_en: "Blowdry (shoulder & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
+        { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
+        { title_nl: "Föhnen (op de schouderlengte en korter)",   title_en: "Blowdry (shoulder length & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
       ],
       kleuren: [
         { title_nl: "Uitgroei", title_en: "Regrowth", desc_nl: "Tot 1,5 cm uitgroei", desc_en: "Regrowth till 1.5cm", price: 65 }
@@ -178,6 +178,20 @@ document.addEventListener("DOMContentLoaded", () => {
   if (closeBtn) closeBtn.addEventListener("click", () => modal.classList.add("hidden"));
   if (modal) modal.addEventListener("click", e => {
     if (e.target === modal) modal.classList.add("hidden");
+  });
+
+  // Treatment modal
+  const treatmentModal   = document.getElementById("treatmentModal");
+  const treatmentLink    = document.getElementById("treatmentInfoLink");
+  const closeTreatmentBtn = document.getElementById("closeTreatmentModal");
+
+  if (treatmentLink) treatmentLink.addEventListener("click", e => {
+    e.preventDefault();
+    treatmentModal.classList.remove("hidden");
+  });
+  if (closeTreatmentBtn) closeTreatmentBtn.addEventListener("click", () => treatmentModal.classList.add("hidden"));
+  if (treatmentModal) treatmentModal.addEventListener("click", e => {
+    if (e.target === treatmentModal) treatmentModal.classList.add("hidden");
   });
 
 });
