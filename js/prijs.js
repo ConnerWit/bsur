@@ -28,7 +28,9 @@ document.addEventListener("DOMContentLoaded", () => {
       knippen: [
         { title_nl: "Kort haar",     title_en: "Short hair",  desc_nl: "30–45 min knippen & föhnen", desc_en: "30–45 min cut & blowdry", price: 58 },
         { title_nl: "Halflang haar", title_en: "Medium hair", desc_nl: "45 min knippen & föhnen",    desc_en: "45 min cut & blowdry",    price: 74 },
-        { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 }
+        { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 },
+        { title_nl: "Baard Trimmen",     title_en: "Beard Trim",   desc_nl: "",    desc_en: "",    price: 20 },
+        { title_nl: "Glad Scheren",     title_en: "Clean Shave",   desc_nl: "",    desc_en: "",    price: 35 }
       ],
       styling: [
         { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
@@ -54,7 +56,10 @@ document.addEventListener("DOMContentLoaded", () => {
       knippen: [
         { title_nl: "Kort haar",     title_en: "Short hair",  desc_nl: "30–45 min knippen & föhnen", desc_en: "30–45 min cut & blowdry", price: 58 },
         { title_nl: "Halflang haar", title_en: "Medium hair", desc_nl: "45 min knippen & föhnen",    desc_en: "45 min cut & blowdry",    price: 74 },
-        { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 }
+        { title_nl: "Lang haar",     title_en: "Long hair",   desc_nl: "60 min knippen & föhnen",    desc_en: "60 min cut & blowdry",    price: 89 },
+        { title_nl: "Baard Trimmen",     title_en: "Beard Trim",   desc_nl: "",    desc_en: "",    price: 20 },
+        { title_nl: "Glad Scheren",     title_en: "Clean Shave",   desc_nl: "",    desc_en: "",    price: 35 }
+
       ],
       styling: [
         { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
@@ -77,7 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     andy: {
       knippen: [
-        { title_nl: "Kort haar", title_en: "Short hair", desc_nl: "30–45 min knippen & föhnen", desc_en: "30–45 min cut & blowdry", price: 58 }
+        { title_nl: "Kort haar", title_en: "Short hair", desc_nl: "30–45 min knippen & föhnen", desc_en: "30–45 min cut & blowdry", price: 58 },
+        { title_nl: "Baard Trimmen",     title_en: "Beard Trim",   desc_nl: "",    desc_en: "",    price: 20 },
+        { title_nl: "Glad Scheren",     title_en: "Clean Shave",   desc_nl: "",    desc_en: "",    price: 35 }
+
       ],
       styling: [
         { title_nl: "Föhnen (langer dan schouderlengte)", title_en: "Blowdry (longer than shoulder length)",  desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 55 },
