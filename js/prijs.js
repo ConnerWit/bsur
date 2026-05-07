@@ -14,8 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",          price: 140 },
         { title_nl: "Volledige kleuring + knippen", title_en: "Total Color + Cut", desc_nl: "Meer dan alleen uitgroei + knippen",     desc_en: "Anything more than regrowth + cut",  price: 170 },
-        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                price: 65  },
-        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 110 },
+        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                price: 82.50  },
+        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 127.50 },
         { title_nl: "Face frame",                   title_en: "Face Frame",        desc_nl: "Highlights rond het gezicht (¼)",        desc_en: "A few highlights around the front (¼)", price: 70 },
         { title_nl: "Halve coupe highlights",       title_en: "Half Head",         desc_nl: "Highlights op ½ van het haar",           desc_en: "Half head highlights + quick dry",   price: 130 },
         { title_nl: "Volledige coupe highlights",   title_en: "Full Head",         desc_nl: "Highlights over het gehele haar",        desc_en: "Full head of highlights",            price: 180 }
@@ -39,8 +39,8 @@ document.addEventListener("DOMContentLoaded", () => {
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",              price: 140 },
         { title_nl: "Volledige kleuring + knippen", title_en: "Total Color + Cut", desc_nl: "Meer dan alleen uitgroei + knippen",     desc_en: "Anything more than regrowth + cut",      price: 170 },
-        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                    price: 65  },
-        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 110 },
+        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                price: 82.50  },
+        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 127.50 },
         { title_nl: "Face frame",                   title_en: "Face Frame",        desc_nl: "Highlights rond het gezicht (¼)",        desc_en: "A few highlights around the front (¼)",  price: 70  }
       ],
       verzorging: [
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
       kleuren: [
         { title_nl: "Uitgroei + knippen",           title_en: "Regrowth + Cut",    desc_nl: "Tot 1,5 cm uitgroei + knippen",         desc_en: "Regrowth till 1.5cm + cut",              price: 140 },
         { title_nl: "Volledige kleuring + knippen", title_en: "Total Color + Cut", desc_nl: "Meer dan alleen uitgroei + knippen",     desc_en: "Anything more than regrowth + cut",      price: 170 },
-        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                    price: 65  },
-        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 110 }
+        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                price: 82.50  },
+        { title_nl: "Volledige kleuring",           title_en: "Total Color",       desc_nl: "Meer dan alleen uitgroei + snel drogen", desc_en: "Anything more than regrowth + quick dry", price: 127.50 },
       ],
       verzorging: [
         { title_nl: "Mini Headspa",        title_en: "Mini Headspa",      desc_nl: "30 min massage & snel föhnen",   desc_en: "30 min massage & quick blowdry", price: 35 },
@@ -92,7 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
         { title_nl: "Föhnen (op de schouderlengte en korter)",   title_en: "Blowdry (shoulder length & above)", desc_nl: "In model geföhnd", desc_en: "Blow-dried to shape", price: 40 }
       ],
       kleuren: [
-        { title_nl: "Uitgroei", title_en: "Regrowth", desc_nl: "Tot 1,5 cm uitgroei", desc_en: "Regrowth till 1.5cm", price: 65 }
+        { title_nl: "Uitgroei",                     title_en: "Regrowth",          desc_nl: "Tot 1,5 cm uitgroei",                   desc_en: "Regrowth till 1.5cm",                    price: 82.50  },
       ],
       verzorging: [
         { title_nl: "Mini Headspa",        title_en: "Mini Headspa",      desc_nl: "30 min massage & snel föhnen",   desc_en: "30 min massage & quick blowdry", price: 35 },
@@ -123,7 +123,7 @@ document.addEventListener("DOMContentLoaded", () => {
       <div class="service">
         <div class="service-title">${lang === "en" ? s.title_en : s.title_nl}</div>
         <div class="service-desc">${lang === "en" ? s.desc_en : s.desc_nl}</div>
-        <div class="service-price">€${s.price},00</div>
+        <div class="service-price">€${Number(s.price).toLocaleString("nl-NL", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</div>
       </div>
     `).join("");
   }
